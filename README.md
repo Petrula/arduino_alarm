@@ -13,8 +13,8 @@
 
 ## Электрическая схема
 
-[](schema.png)
-[](alarm_button.png)
+![Электрическая схема](schema.png)
+![Фото проекта](alarm_button.png)
 
 ## Компоненты
 
@@ -66,17 +66,23 @@ https://api.telegram.org/bot<ТОКЕН>/getUpdates
 git clone https://github.com/<username>/arduino_alarm.git
 cd arduino_alarm
 go mod tidy
-Создайте файл .env в корне проекта:
+```
 
+Создайте файл `.env` в корне проекта:
+
+```
 TELEGRAM_TOKEN=...
 CHAT_ID=...
 PORT_NAME=...
-Запуск
+```
 
-Arduino IDE: upload
-Vs Code: go run .
+## Запуск
 
-Важные моменты
-Serial Monitor в Arduino IDE должен быть закрыт — порт может использовать только одна программа одновременно
-COM-номер может меняться при переподключении USB — проверяйте в Arduino IDE (Tools → Port)
-Скорость Serial (9600 baud) должна совпадать в коде прошивке и в Go
+1. **Arduino IDE** — Upload прошивки
+3. **VS Code** — `go run .`
+
+## Важные моменты
+
+- Serial Monitor в Arduino IDE должен быть закрыт — порт может использовать только одна программа одновременно
+- COM-номер может меняться при переподключении USB — проверяйте в Arduino IDE (Tools → Port)
+- Скорость Serial (9600 baud) должна совпадать в прошивке и в Go
