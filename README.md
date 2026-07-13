@@ -66,17 +66,24 @@ https://api.telegram.org/bot<ТОКЕН>/getUpdates
 git clone https://github.com/<username>/arduino_alarm.git
 cd arduino_alarm
 go mod tidy
+```
+
+```bash
 Создайте файл .env в корне проекта:
 
 TELEGRAM_TOKEN=...
 CHAT_ID=...
 PORT_NAME=...
+```
+
+```bash
 Запуск
-
-Arduino IDE: upload
+(Arduino IDE: upload)
 Vs Code: go run .
-
-Важные моменты
+```
+# Важные моменты:
 Serial Monitor в Arduino IDE должен быть закрыт — порт может использовать только одна программа одновременно
+
 COM-номер может меняться при переподключении USB — проверяйте в Arduino IDE (Tools → Port)
+
 Скорость Serial (9600 baud) должна совпадать в коде прошивке и в Go
